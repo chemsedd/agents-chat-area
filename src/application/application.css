@@ -1,0 +1,21 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+#startConversation:hoover {
+	-fx-background-color: rgb(3,154,47);
+	-fx-cursor: hand;
+}
+
+#exitConversation:hoover {
+	-fx-cursor: hand;
+}
+
+#sendMessage:hoover {
+	-fx-background-color: rgb(11,81,110);
+	-fx-cursor: hand;
+}
+
+#killMe:hoover {
+	-fx-background-color: rgb(129,7,7);
+	-fx-cursor: hand;
+}
+

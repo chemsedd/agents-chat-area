@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="191.0" prefWidth="720.0" scaleShape="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Pane prefHeight="201.0" prefWidth="731.0" style="-fx-background-color: linear-gradient(#f2CEaD, #72EDB6);">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="48.0" layoutY="12.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="283.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="TRANSPARENT" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Text layoutX="29.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chat" wrappingWidth="77.13671875">
+               <font>
+                  <Font name="Open Sans Light" size="35.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.3952380952380953" startX="0.680952380952381">
+                     <stops>
+                        <Stop color="#48b9b9" />
+                        <Stop color="#529db9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text layoutX="107.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Area" wrappingWidth="87.13671875">
+               <font>
+                  <Font name="Open Sans SemiBold" size="35.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="0.3952380952380953" startX="0.680952380952381">
+                     <stops>
+                        <Stop color="#48b9b9" />
+                        <Stop color="#529db9" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <Text fill="WHITE" layoutX="27.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agent's name" wrappingWidth="137.13671875">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000009a" />
+               </effect>
+            </Text>
+            <TextField fx:id="agentName" layoutX="14.0" layoutY="101.0" prefHeight="34.0" prefWidth="228.0" promptText="Agent name here..." style="-fx-background-radius: 30px; -fx-padding: 0px 0px 0px 10px; -fx-alignment: center;">
+               <effect>
+                  <DropShadow color="#00000069" height="9.14" radius="5.5525" width="15.07" />
+               </effect>
+            </TextField>
+            <Button fx:id="startConversation" defaultButton="true" layoutX="251.0" layoutY="101.0" mnemonicParsing="false" onAction="#StartConversation" prefHeight="34.0" prefWidth="147.0" style="-fx-background-radius: 30px; -fx-background-color: linear-gradient(#32afcb, #12cffb);" text="Start agent" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#00000047" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Text fill="WHITE" layoutX="422.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Actions history" wrappingWidth="156.13671875">
+               <font>
+                  <Font name="Yu Gothic UI Regular" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#0000009a" />
+               </effect>
+            </Text>
+            <TextArea fx:id="console" editable="false" layoutX="422.0" layoutY="49.0" prefHeight="127.0" prefWidth="293.0">
+               <effect>
+                  <DropShadow color="#00000069" height="9.14" radius="5.5525" width="15.07" />
+               </effect>
+            </TextArea>
+            <Button fx:id="exitConversation" cancelButton="true" layoutX="251.0" layoutY="142.0" mnemonicParsing="false" onAction="#Exit" prefHeight="34.0" prefWidth="147.0" style="-fx-background-color: linear-gradient(#fd1d1d, #bd1d1d); -fx-background-radius: 30px;" text="Exit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#00000053" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="toggleSniffer" layoutX="15.0" layoutY="142.0" mnemonicParsing="false" onAction="#toggleAgentSinnifer" prefHeight="34.0" prefWidth="228.0" style="-fx-background-radius: 30px; -fx-background-color: linear-gradient(#717171, #a1a1a1);" text="Agents Sniffer" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="191.0" layoutX="409.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="5.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#31859478" />
+                        <Stop color="#c21c0a00" offset="0.007662835249042145" />
+                        <Stop color="#c41c0641" offset="0.2273571118220958" />
+                        <Stop color="#35bcbc" offset="0.47572777185290516" />
+                        <Stop color="#c41c0640" offset="0.7523008255322511" />
+                        <Stop color="#c41c0600" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
